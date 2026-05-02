@@ -1,0 +1,5 @@
+{
+  "name": "Remix: CuraFlow: Hospital Crowd Management",
+  "description": "A real-time dashboard for monitoring hospital occupancy, predicting wait times, and optimizing patient flow using AI-driven insights.",
+  "requestFramePermissions": []
+}

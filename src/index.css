@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-hospital-bg: #0a0a0a;
+  --color-hospital-ink: #f8fafc;
+  --color-hospital-line: #262626;
+  --color-hospital-accent: #991b1b;
+  --color-hospital-surface: #171717;
+}
+
+@layer base {
+  body {
+    @apply bg-hospital-bg text-hospital-ink font-sans antialiased;
+  }
+}
+
+.data-grid-row {
+  @apply grid grid-cols-5 items-center p-4 border-b border-hospital-line transition-colors hover:bg-white/5;
+}
+
+.status-badge {
+  @apply px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider border;
+}
+
+.status-normal { @apply bg-emerald-500/10 text-emerald-400 border-emerald-500/20; }
+.status-busy { @apply bg-amber-500/10 text-amber-400 border-amber-500/20; }
+.status-critical { @apply bg-rose-500/10 text-rose-400 border-rose-500/20; }
